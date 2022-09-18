@@ -1,0 +1,10 @@
+site_name: My Docs
+theme:
+  name: material
+plugins:
+    - search
+    - macros
+extra_css:
+  - css/extra.css
+extra:
+  YOCTO_BRANCH: kirkstone
