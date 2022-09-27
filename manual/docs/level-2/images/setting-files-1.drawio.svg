@@ -1,6 +1,30 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="882px" height="162px" viewBox="-0.5 -0.5 882 162" content="&lt;mxfile&gt;&lt;diagram id=&quot;TLNIrRDNdd8bsfQ5ftmR&quot; name=&quot;ページ1&quot;&gt;7VxBk5sgFP41HDsjoghHzbrbS0859GyjG50aSQ1pkv76gkKicbfddDcSG2YyIz5Q4b3v430BE4Bmq/1TnazzLyzNSuA66R6gB+C60IeOOEjLQVkcFLSWZV2kynYyzItfmW6orNsizTa9hpyxkhfrvnHBqipb8J4tqWu26zd7ZmX/qetkmQ0M80VSDq1fi5TnrZW4wcn+OSuWuX4yxLStWSW6sRrJJk9StuuYUAzQrGaMt6XVfpaV0nvaL+11j6/UHjtWZxV/ywW6yz+TcqsGd2ALzkBMQCg+DyD2QRgDGoIYAYIA9ZuCC0KoC56qCiM1Jn7QjqrZtkoz+SwHoGiXFzybr5OFrN0JbAhbzlelOIOi+FyU5YyVrBbnFatEo2jDa/b96GPhnehnVvNCRCIsi2UlbJzJuzyzis/VY1/wgTLJa7N9x6R88pSxVcbrg2iiapEKjwKojtauE2yibHk30FgZEwWw5fHOpxiIggrDKyEhg5AAF5dcumOdVD0H4x9biZRm/J82DU9C0QC66704iIoG3aJup3opaz3HOV0pSsvmqMILVUF82vBG2hLNtIU8NCUogaF6JgbVdk7dTZm/1dfq7mgeCY/DDrSPvLdx4RXPvIsiEuftdAjxAPcv8eUDyOD1yeAPyQDdF8jwIVyglguWCzfEBb/PBTwiF3ROslywXLgJLuA+F4IxuQAtFywXbogLQZ8LZEwuuJYLlgs3xAXS5wIdkwvIIBfeG3kJ/j5ap48F2scCdMYEg2cMDBDQzpwXeyCKAMWDWbAT8X9cb/tfcBL4BsWkb3EyGZxgg0ILW5xMBieBQREy3FMZCydCeyAtv9Eg4keJ7twZGIhBFeKZk6R21rgQKOf7fmOqEM+q1engxDOnQjyrVqeDE9+cCvHMqdU/LIVAQLRSIbSBR9jAo6mKHqUlik9Lh+TOlMr5nsq4SsXciyd2ZrkQKB40qFTMvZRhcXIpTlxzSkUnv9vKQH8LfWuhboMuAogADAY0kmWVwDQCKdVZKrozUCFzssY3t/NvJ58JJSnftTiZDE5MJim7PDcdnJjMO+aW56yYuSqoztbyRv3K7dstxckAxScG1Yy5LUWLk0txQg2qGZO/HbNZ6prv2huUPna9bzI4MZmk9D0sTiaAE4NJCtslvMngxGTeweaW8N4pZoRiEZcHIMKNYsFyr1tubt+5hjlbDr7mN21xevoTjaau818kKP4N&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="882px" height="282px" viewBox="-0.5 -0.5 882 282" content="&lt;mxfile&gt;&lt;diagram id=&quot;TLNIrRDNdd8bsfQ5ftmR&quot; name=&quot;ページ1&quot;&gt;7Vxbb+MoFP41PI4EvgUe7dSd3YeRRlOt9tmNaWKtY7yO06Tz6wds8L3adNOaeEoVqfjAMQf4vsPJAQXY6/35axHlu28spimwYHwG9h2wLOQiyP8JyYuUQHtVS7ZFEktZK3hIflLVUEqPSUwPvYYlY2mZ5H3hhmUZ3ZQ9WVQU7NRv9sTSfq95tKUjwcMmSsfSv5O43NVSbK1a+R802e5Uz8gjdc0+Uo3lSA67KGanjsgOgb0uGCvr0v68pqmYPTUvtd79K7WNYQXNyksUlMnPUXqUgwOhDbANCJIF/hEFCwRKEqyVBFcFBPxQSVylHsqC7wPLS7kxwWPBS1tRUlVEavmOUldVQdMp6XThVfbwLlzgQ2HP9Ju51t3IVNWXfHNTxT9tF3/9+HPinVOSaJ/zQvZ4yFWvSAxVFkh/Xi6fTReQAAS+GCpZdy0DIQY+/9xVgw8B8Semo34Psar3QOCr6cAKbeWLgjAHXi6KHNQpO4pBnXZJSR/yaCPEJ85cLtuV+5Q/IV7MaZHsaUmLVul7Kwri6LCjsWx7KAv2T0MNIXlK0nTNUia0M5ZRoZEUnJsJy0R39FA2eqodsOz7e4//CX2Wla/JH+SokHqu/QUS9VGabEUHG86Hys4xQSRnnmlR0nNHJAnzlTI+xuKFN5G1tpxN5b1W8vnUugJbeapd1w0oxUi6n23z6pahvCBJOk1YTEaEfWGbkk3ho0aeq0iG+myzBT6GsCjYMYurdYT/DYmJRe2vPJ/EQMxrwgHjy5UoWT5at+kFmFimS9fEGi8JxlNL4r3DkhA49qHSZRzyKOtNsPfvUbj2avxfDhVQuX+EyMrP/F+FT1jVnaSVotaBsNUc+NDLHMtd60ekZXxQtXFjH/cx5s42I34z7JWaI+cyLrwyM1dRZOCPhv5qzJd3IIPTJ4M7JgOyJsjwLlxAhguGCzfEBbfPBW9OLliGC4YLN8QFr8+Fibj147hgGy4YLtwQF1Z9LuA5ueAYLhgu3BAXcJ8LZE4uuBq5cO3Kj1OEy8cC6WMBwTnB4GkDAwKk4/NCR2SiuTlDL9hNNP+/fNvvgpOVqzGYnDi0MDi5UZx4GgMtbHCyGJysNAYh4zOVuXDSPY+0RyvehOjwk4EBa4xCms6M27h9pAwP/uYMQxDUd9hhgPJWoDj64hAE9Z0EGKC8FSiuvkAEQZ1p8lfTIQjg5iYRqfDhV/ioqoJ7IQnCNn2IP1m0MjxXmTla0ZdNNr7ljUhxkM5oRV+q1QDlrUCxdEYr+tKwV+Tka4m4++qIm7S4vkMbtHeUm0Mtoq4C4+CTocrWGdqYpO1ygKJ1nzJZ2+UARes+pS9ta4CypK1HeTMT0PxuqBok9eb95o1M+ncxSHGxxogGmfTvcoBCNEY06CbTv2ajuhpVHtQZ/pgM8WKAonefMhni5QBF6z5lLuouBih6tx59Sd8rAxoetXD1FQi8KmrxxMm3OOr+5HHMIDH8kV+4+WP7OzhVXefnhOzwFw==&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
+        <path d="M 1 151 L 311 151 L 311 251 L 176 251 L 156 281 L 156 251 L 1 251 Z" fill="none" stroke="#ff6666" stroke-miterlimit="10" stroke-dasharray="3 3" transform="rotate(180,156,216)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 308px; height: 1px; padding-top: 231px; margin-left: 2px;">
+                        <div data-drawio-colors="color: #FF6666; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(255, 102, 102); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                パッケージのサマリ
+                                <br/>
+                                ライセンスの情報
+                                <br/>
+                                ソースコードのURI
+                                <br/>
+                                <br/>
+                                などのパッケージ固有の設定情報を含む
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="156" y="236" fill="#FF6666" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    パッケージのサマリライセンスの情報ソースコードのURI...
+                </text>
+            </switch>
+        </g>
         <rect x="1" y="1" width="880" height="160" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
