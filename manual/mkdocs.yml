@@ -4,6 +4,11 @@ theme:
 plugins:
     - search
     - macros
+    - include-markdown
+    - mkdocs-glossary-plugin:
+        glossary_dirs: ["glossary"]
+markdown_extensions:
+  - admonition
 extra_css:
   - css/extra.css
 extra:

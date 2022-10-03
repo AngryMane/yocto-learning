@@ -2,8 +2,9 @@
 title: 存在するパッケージ名のリストを取得する
 ---
 
-> **NOTE**
-> このページを読む前に、[レベル1に必要な知識](../model.md)を確認してください  
+!!! NOTE
+
+    このページを読む前に、[yocto/bitbake/pokyとは](../preamble.md)を確認してください  
 
 # 存在するパッケージのリストを取得する
 bitbakeコマンドの入力にはパッケージ名がありますが、そもそもどんな名前のパッケージがあるか知らないとパッケージ名を指定できません  
@@ -12,23 +13,22 @@ bitbakeコマンドの入力にはパッケージ名がありますが、そも�
 まずはpokyリポジトリをcloneします  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
 
-```bash
+~~~bash
 $ git clone https://git.yoctoproject.org/git/poky -b {{YOCTO_BRANCH}}
 $ cd poky
-```
+~~~
 
 
-次に、環境変数を設定します。これをやらないとbitbakeなどのコマンドが使用できないためです  
+次に、`ビルド環境を設定するスクリプト`を実行します。これをやらないとbitbakeなどのコマンドが使用できないためです  
 
-```bash
-# 環境変数を設定する
+~~~bash
 $ source oe-init-build-env
-```
+~~~
 
-環境変数を設定することによって、bitbakeコマンドだけではなく、様々なユーティリティコマンドが使用可能になります  
-今回はその中のbitbake-layersコマンドを使用します  
+`ビルド環境を設定するスクリプト`を実行することで、様々なユーティリティコマンドが使用可能になります  
+今回はbitbake-layersコマンドを使用します。 以下の通りコマンドを実行してください  
 
-```bash
+~~~bash
 $ bitbake-layers show-recipes
 NOTE: Starting bitbake server...
 Loading cache: 100% |#############################################################################################################################################################################| Time: 0:00:00
@@ -50,14 +50,14 @@ alsa-state:
   meta                 0.2.0
 alsa-tools:
 # 以下省略
-```
+~~~
 
 この出力の`acl`や`acpica`などがパッケージ名に相当します  
 
 なお、OSイメージをビルドするパッケージの多くは、core-image...という名前です(例外あり)  
 したがって、以下のようにgrepを組み合わせるとOSイメージをビルドするパッケージの大雑把なリストが得られます  
 
-```bash
+~~~bash
 $ bitbake-layers show-recipes | grep core-image
 core-image-base:
 core-image-full-cmdline:
@@ -79,4 +79,4 @@ core-image-tiny-initramfs:
 core-image-weston:
 core-image-weston-sdk:
 core-image-x11:
-```
+~~~

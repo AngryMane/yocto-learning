@@ -2,39 +2,40 @@
 title: その他(OS以外)のパッケージをビルドする
 ---
 
-> **NOTE**
-> このページを読む前に、[レベル1に必要な知識](../model.md)を確認してください  
+!!! NOTE
 
-> **NOTE**
-> サンプルOSのビルドについては、[サンプルOSをビルドする](./02-build-sample-os.md)をご参照ください  
+    このページを読む前に、[yocto/bitbake/pokyとは](../preamble.md)を確認してください  
+
+!!! NOTE
+
+    サンプルOSのビルドについては、[サンプルOSをビルドする](./02-build-sample-os.md)をご参照ください  
 
 # その他(OS以外)のパッケージをビルドする
 その他(OS以外)のパッケージをビルドしてみましょう。まだpokyリポジトリをcloneしていない場合、cloneします  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
 
-```bash
+~~~bash
 $ git clone https://git.yoctoproject.org/git/poky -b {{YOCTO_BRANCH}}
 $ cd poky
-```
+~~~
 
 次に、その他(OS以外)のパッケージをビルドします。ここでは、`busybox`というソフトウェアをビルドします  
+[yocto/bitbake/pokyとは](../preamble.md)の通り、以下の手順でビルドします  
 
-[レベル1に必要な知識](../model.md)の通り、以下の手順でビルドします  
+1. `ビルド環境を設定するスクリプト` を実行する
+1. `bitbakeコマンド` を実行する
 
-1. 環境変数を設定する
-1. bitbakeコマンドを実行する
-
-```bash
-# 環境変数を設定する
+~~~bash
+# ビルド環境を設定するスクリプト を実行する
 $ source oe-init-build-env
 
-# ビルドコマンドを実行する
+# bitbakeコマンド を実行する
 $ bitbake busybox
-```
+~~~
 
 build/ディレクトリの中(build/tmp/deploy/rpm/core2_64)を確認すると、busyboxのインストーラが出力されていることが確認できます  
 
-```bash
+~~~bash
 $ ll
 total 3772
 drwxr-xr-x 2 yosuke yosuke    4096 Sep 25 10:25 ./
@@ -57,4 +58,4 @@ drwxr-xr-x 3 yosuke yosuke    4096 Sep 25 10:25 ../
 -rw-r--r-- 2 yosuke yosuke    6089 Sep 25 10:23 zip-dev-3.0-r2.core2_64.rpm
 -rw-r--r-- 2 yosuke yosuke   34729 Sep 25 10:23 zip-doc-3.0-r2.core2_64.rpm
 -rw-r--r-- 2 yosuke yosuke  219198 Sep 25 10:23 zip-src-3.0-r2.core2_64.rpm
-```
+~~~

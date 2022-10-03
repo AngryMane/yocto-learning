@@ -2,3 +2,21 @@
 .md-grid {
   max-width: 100%; /* or 100%, if you want to stretch to full-width */
 }
+
+.md-sidebar--primary {
+  style: "top: 96px;"
+}
+
+.md-sidebar--secondary {
+  max-width: 0%; /* or 100%, if you want to stretch to full-width */
+}
+
+h3 {
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  border-left: solid 5px #7db4e6;/*左線*/
+}
+
+h4 {
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 1px gray;
+}

@@ -1,12 +1,12 @@
 ---
-title: レベル1に必要な知識
+title: yocto/bitbake/pokyとは
 ---
 
-# Yoctoのモデル
+# yocto/bitbake/pokyとは
 
 ## Yoctoとは
-Yoctoプロジェクトは、`カスタマイズしたlinuxOSをビルドする`ための開発環境です。  
-`カスタマイズしたlinuxOSをビルドする`作業を少し細かく分解すると、以下の図のようになります。   
+Yoctoプロジェクトは、`カスタマイズしたlinuxOSをビルドする`ための開発環境です  
+`カスタマイズしたlinuxOSをビルドする`作業を少し細かく分解すると、以下の図のようになります   
 (あくまで簡単なイメージです)  
 
 ![](images/os-build.drawio.svg)  
@@ -16,21 +16,21 @@ Yoctoプロジェクトは、`カスタマイズしたlinuxOSをビルドする`
 ## bitbakeコマンドとパッケージについて
 bitbakeコマンドは引数で指定された対象をビルドします。↓のようなイメージですね   
 
-```bash
+~~~bash
 $ bitbake python3
-```
+~~~
 
-**そして、このbitbakeコマンドがビルド対象するものをパッケージと呼びます**  
+**そして、このbitbakeコマンドがビルド対象とするものをパッケージと呼びます**  
+具体的には`OSイメージ`、`ソフトウェア`や`ライブラリ`のことだと思ってください  
 
-具体的なイメージとしてOSイメージ、ソフトウェアやライブラリのことだと思ってください  
-例えば、core-image-minimal(yoctoでビルドできるサンプルOSの一つ)、python3やbusyboxはパッケージです  
-したがって、ビルド環境の設定をすれば以下のコマンドでそれぞれビルドすることが可能です  
+例えば、core-image-minimal(yoctoのサンプルOSの一つ)、python3やbusyboxはパッケージです  
+したがって、**ビルド環境の設定をすれば**以下のコマンドでビルドできます   
 
-```bash
+~~~bash
 $ bitbake core-image-minimal
 $ bitbake python3
 $ bitbake busybox
-```
+~~~
 
 ただし、OSイメージのパッケージをビルドした場合と、普通のソフトウェアのパッケージをビルドした場合ではbitbakeコマンドの出力が異なります  
 OSイメージをビルドする場合、先に紹介した図になります  
@@ -41,31 +41,10 @@ OSイメージをビルドする場合、先に紹介した図になります
 
 ![](images/package-build.drawio.svg)  
 
-<!--
-
-## パッケージ間のビルド時の依存関係について
-
-あるパッケージAをビルドする際、別のパッケージBのビルドが必要になることがあります  
-例えば、以下のようなケースです
-
-* パッケージAのビルドそのものにツールとして必要(cmakeなど)
-* パッケージAのビルド(というより、コンパイル)がパッケージBのライブラリやヘッダファイルを参照している
-
-こういった場合、`bitbake パッケージA`としてパッケージAのビルドを実行すると、自動的にパッケージBのビルドも実行されます  
-このような依存関係は再帰的にどこまでも続くので、以下のような依存関係のツリーが存在することになります  
-
-
-> **NOTE**  
-> この図はDFDではありません。矢印はある処理が別の処理をキックする様を表現しています  
-
-![](images/build-tree.drawio.svg)
-
--->
-
 
 ## リファレンス実装(poky)について
-bitbakeコマンドの入力となる`yocto設定ファイル`は非常に規模が大きく、複雑な実装が必要です　  
-このため、`yocto設定ファイル`のリファレンス実装と`環境変数を設定する`スクリプト, `bitbakeコマンド`スクリプトをまとめたpokyというリポジトリが存在します  
+bitbakeコマンドの入力となる`設定ファイル`は非常に規模が大きく、複雑な実装が必要です　  
+このため、`設定ファイル`のリファレンス実装と`ビルド環境を設定するスクリプト`, `bitbakeコマンド`スクリプトをまとめたpokyというリポジトリが存在します  
 大抵の場合、このpokyをカスタマイズすることで実装を行います。   
 
 ![](images/inout_poky.drawio.svg)  
@@ -75,18 +54,14 @@ bitbakeコマンドの入力となる`yocto設定ファイル`は非常に規模
 
 ![](images/poky_directory.drawio.svg)
 
-> **NOTE**  
-> linuxカーネルやrootfsのファイル名はyocto設定ファイルによってかなり変化します  
+!!! NOTE
 
-</br>
-
-> **NOTE**  
-> リポジトリをcloneしただけの状態ではbuildディレクトリは存在しません。何等かのパッケージのビルドが必要です  
+    linuxカーネルやrootfsのファイル名は設定ファイルによってかなり変化します  
 
 実際にpokyのディレクトリ構成を確認してみましょう  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
 
-```bash
+~~~bash
 $ git clone https://git.yoctoproject.org/git/poky -b {{YOCTO_BRANCH}}
 $ tree -L 1
 .
@@ -106,33 +81,31 @@ $ tree -L 1
 ├── contrib                                                  ┐
 ├── documentation                                            │
 ├── meta                                                     │
-├── meta-poky                                                ├  yocto設定ファイル
+├── meta-poky                                                ├  設定ファイル
 ├── meta-selftest                                            │
 ├── meta-skeleton                                            │
 ├── meta-yocto-bsp                                           ┘
-├── oe-init-build-env                                        <- 環境変数を設定するスクリプト
+├── oe-init-build-env                                        <- ビルド環境を設定するスクリプト
 └── scripts
 
 10 directories, 12 files
-```
+~~~
 
 ライセンスファイルやシンボリックリンク、.git等不要ファイルを削除して整理します  
 
-```bash
+~~~bash
 $ tree -L 1
 .
 ├── bitbake                                                  <- bitbakeコマンド(を提供しているディレクトリ)
 ├── build                                                    <- この中にlinuxカーネルとrootfsがある
 ├── contrib                                                  ┐
 ├── meta                                                     │
-├── meta-poky                                                ├  yocto設定ファイル
+├── meta-poky                                                ├  設定ファイル
 ├── meta-selftest                                            │
 ├── meta-skeleton                                            │
 ├── meta-yocto-bsp                                           ┘
-├── oe-init-build-env                                        <- 環境変数を設定するスクリプト
+├── oe-init-build-env                                        <- ビルド環境を設定するスクリプト
 └── scripts
-```
+~~~
 
 先に示した図の通りのディレクトリ構造になっていることが分かります  
-</br>
-以上がレベル1に必要な知識です。pokyの具体的な使い方はユースケースのセクションをご参照ください  

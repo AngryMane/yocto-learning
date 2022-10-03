@@ -1,5 +1,5 @@
 ---
-title: レベル2に必要な知識
+title: レベル2に必要な知識(old)
 ---
 
 # Yoctoのモデル
@@ -16,14 +16,18 @@ title: レベル2に必要な知識
 
 yocto設定ファイルは大きく分けて以下の種類のファイルが存在します  
 
-* レシピファイル(.bb/.inc/.bbappend/.bbclass)
+* レシピファイル(.bbなど)
 * コンフィグファイル(.conf)
 
-このページではレシピファイルに絞って説明します  
+現段階の理解を図にすると、以下のようなイメージですね  
+
+![](./images/setting-files-0.drawio.svg)
+
+この図をだんだん詳細にしていきましょう。 このページではレシピファイルに絞って説明します  
 
 
-#### レシピファイル(.bb)
-bitbakeのビルド対象となるパッケージはそのビルド方法などをの設定を定義したファイルを持ちます。これをレシピファイルと呼びます  
+#### レシピファイル(.bbなど)
+**bitbakeのパッケージはそのビルド方法などのパラメータを定義したファイルを持ちます。これをレシピファイルと呼びます**  
 
 具体例として、alsa-libパッケージのレシピを見てみましょう  
 レシピを探す方法には`bitbake-getvar`や`bitbake -e`などツールを使う方法がありますが、今回はfindコマンドで探します   
@@ -77,11 +81,56 @@ SRC_URI[sha256sum] = "8a35b7218e50f2a2c79342d0de98ded81439ce19e12809385ec9be9596
 
 ![](./images/setting-files-2.drawio.svg)
 
-具体例を見てみましょう。  
+
+bashパッケージの例を見てみましょう  
+bashパッケージのレシピファイルは`meta/recipes-extended/bash/`に存在します  
+(見つからない場合は先のセクションを見て自分で探してみてください)  
 
 
 ```bash
+$ cd meta/recipes-extended/bash/
+$ ll
+total 24
+drwxr-xr-x  3 yosuke yosuke 4096 Sep  7 15:53 ./
+drwxr-xr-x 88 yosuke yosuke 4096 Sep  7 15:53 ../
+drwxr-xr-x  2 yosuke yosuke 4096 Sep  7 15:53 bash/           <- bashのソースコードに対するパッチファイルを格納していますが、今は気にしなくてOK
+-rw-r--r--  1 yosuke yosuke 4640 Sep  7 15:53 bash.inc        <- レシピファイルから読み込まれるファイル
+-rw-r--r--  1 yosuke yosuke  989 Sep  7 15:53 bash_5.1.16.bb  <- レシピファイル
 ```
+
+では、具体的にどのように読み込んでいるのかを確認してみましょう  
+
+```bash
+$ cat bash_5.1.16.bb
+require bash.inc 
+
+# GPL-2.0-or-later (< 4.0), GPL-3.0-or-later (>= 4.0)
+LICENSE = "GPL-3.0-or-later"
+LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
+
+# 以下略
+```
+
+レシピファイル先頭のrequireコマンドで読み込んでいることが分かりますね  
+次に、読み込んでいるファイルの中身を見てみましょう  
+
+```bash
+$ cat bash.inc
+SUMMARY = "An sh-compatible command language interpreter"
+HOMEPAGE = "http://tiswww.case.edu/php/chet/bash/bashtop.html"
+DESCRIPTION = "Bash is the GNU Project's Bourne Again SHell, a complete implementation of the IEEE POSIX and Open Group shell specification with interactive command line editing, job control on architectures that support it, csh-like features such as history substitution and brace expansion, and a slew of other features."
+SECTION = "base/shell"
+
+DEPENDS = "ncurses bison-native virtual/libiconv"
+
+# 以下略
+```
+
+見てわかるように、普通のレシピファイルと全く変わらない記述になっています  
+
+最後にもう一度、このセクションで理解したyocto設定ファイルの図を確認しておきましょう  
+
+![](./images/setting-files-2.drawio.svg)
 
 
 #### レシピファイルが継承するファイル(.bbclass)
