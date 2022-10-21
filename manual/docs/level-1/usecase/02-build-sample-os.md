@@ -7,7 +7,8 @@ title: サンプルOSをビルドする
     このページを読む前に、[yocto/bitbake/pokyとは](../preamble.md)を確認してください  
 
 # サンプルOSをビルドする
-pokyに含まれるサンプルOSをビルドしてみましょう。まずはpokyリポジトリをcloneします  
+pokyの`設定ファイル`はいくつかのサンプルOSをビルドできるように実装されています。ここでは、そのうちの一つのサンプルOSをビルドしてみます  
+まずはpokyリポジトリをcloneしてください  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
 
 ~~~bash

@@ -1,8 +1,8 @@
 ---
-title: yocto/bitbake/pokyとは
+title: yocto/bitbake/poky
 ---
 
-# yocto/bitbake/pokyとは
+# yocto/bitbake/poky
 
 ## Yoctoとは
 Yoctoプロジェクトは、`カスタマイズしたlinuxOSをビルドする`ための開発環境です  

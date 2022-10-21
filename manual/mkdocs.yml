@@ -2,9 +2,10 @@ site_name: My Docs
 theme:
   name: material
 plugins:
+    - include-markdown:
+        dedent: true
     - search
     - macros
-    - include-markdown
     - mkdocs-glossary-plugin:
         glossary_dirs: ["glossary"]
 markdown_extensions:
