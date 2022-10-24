@@ -1,0 +1,4 @@
+---
+title: bbclassファイル
+glossary: bbclass
+---

@@ -2,13 +2,13 @@
 title: レシピファイル
 glossary: レシピファイル
 glossary: レシピ
+glossary: bbファイル
 ---
 
 # 概要
 <!--outline-start-->
 
-**bitbakeのパッケージのパラメータ(リポジトリのURL等)を定義したファイルです**  
-レシピファイルだとちょっと長いので、単にレシピと呼ぶこともあります  
+パッケージのパラメータ(リポジトリのURL等)を定義したファイルです。 単にレシピと呼ぶこともあります   
 
 <!--outline-end-->
 
@@ -56,3 +56,8 @@ SRC_URI[sha256sum] = "8a35b7218e50f2a2c79342d0de98ded81439ce19e12809385ec9be9596
 
 # タスクについて
 TODO
+
+# 関連ワード
+* incファイル
+* bbappend
+* bbclass
