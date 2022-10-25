@@ -44,8 +44,8 @@ title: はじめに
 
 #### ユースケースの実践方法
 
-* パッケージの設定を確認する
-* パッケージの設定を編集する
+* [パッケージの設定を確認する](./level-2/usecase/check-package-params.md)
+* [パッケージの設定を編集する](./level-2/usecase/edit-package-params.md)
     * パッケージ名
     * バージョン情報
     * ライセンス
