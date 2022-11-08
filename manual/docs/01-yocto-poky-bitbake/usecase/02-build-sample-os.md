@@ -2,12 +2,12 @@
 title: サンプルOSをビルドする
 ---
 
-!!! NOTE
+## 先に読むべきページ
+* [yocto/poky/bitbake](../study.md)
 
-    このページを読む前に、[yocto/bitbake/pokyとは](../preamble.md)を確認してください  
+## サンプルOSをビルドする
+pokyの`設定ファイル`はいくつかのサンプルOSをビルドできるように実装されています。ここでは、そのうちの一つをビルドします  
 
-# サンプルOSをビルドする
-pokyの`設定ファイル`はいくつかのサンプルOSをビルドできるように実装されています。ここでは、そのうちの一つのサンプルOSをビルドしてみます  
 まずはpokyリポジトリをcloneしてください  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
 
@@ -17,7 +17,7 @@ $ cd poky
 ~~~
 
 次に、サンプルOSをビルドします。ここでは、`core-image-minimal`という名前のサンプルOSをビルドします  
-[yocto/bitbake/pokyとは](../preamble.md) の通り、以下の手順でビルドします  
+[yocto/bitbake/pokyとは](../study.md) の通り、以下の手順でビルドします  
 
 1. `ビルド環境を設定するスクリプト` を実行する
 1. `bitbakeコマンド` を実行する

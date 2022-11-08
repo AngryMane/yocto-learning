@@ -7,6 +7,10 @@
   style: "top: 96px;"
 }
 
+.md-sidebar--primary {
+  max-width: 100%; /* or 100%, if you want to stretch to full-width */
+}
+
 .md-sidebar--secondary {
   max-width: 100%; /* or 100%, if you want to stretch to full-width */
 }

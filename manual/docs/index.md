@@ -21,33 +21,32 @@ title: はじめに
 <a id="目次"></a>
 # 目次
 
-## yocto/bitbake/poky
+## 01 yocto/poky/bitbake
 #### 学習すること
-最初に [**yocto/bitbake/poky**](./level-1/preamble.md) の概要を学びます  
+最初に [**yocto/poky/bitbake**](./01-yocto-poky-bitbake/study.md) の概要を学びます  
 
 #### できるようになること
 
-* [存在するパッケージ名のリストを取得する](./level-1/usecase/01-get-pakcage-list.md)
-* [サンプルOSをビルドする](./level-1/usecase/02-build-sample-os.md)
-* [その他(OS以外)のパッケージをビルドする](./level-1/usecase/03-build-package.md)
+* [存在するパッケージ名のリストを取得する](./01-yocto-poky-bitbake/usecase/01-get-pakcage-list.md)
+* [サンプルOSをビルドする](./01-yocto-poky-bitbake/usecase/02-build-sample-os.md)
+* [その他(OS以外)のパッケージをビルドする](./01-yocto-poky-bitbake/usecase/03-build-package.md)
 
 
-## レシピファイルとincファイル
+## 02 レシピファイルとincファイル
 #### 学習すること
-[**レシピファイルとincファイル**](./level-2/preamble.md) を学びます  
+[**レシピファイルとincファイル**](./02-recipe-inc/study.md) を学びます  
 
 #### できるようになること
 
-* [パッケージの設定を確認する](./level-2/usecase/01_check-package-params.md)
-* パッケージの設定を変更する
-    * [パッケージ名を変更する](./level-2/usecase/02_change-package-name.md)
-    * [レシピのバージョン情報を変更する](./level-2/usecase/03_change-recipe-version.md)
-    * ソースコードのバージョン情報を変更する
-    * ライセンスを変更する
+* [パッケージの設定を確認する](./02-recipe-inc/usecase/01_check-package-params.md)
+* パッケージの基本的な設定を変更する
+    * [パッケージ名を変更する](./02-recipe-inc/usecase/02_change-package-name.md)
+    * [レシピのバージョン情報を変更する](./02-recipe-inc/usecase/03_change-recipe-version.md)
     * ソースコードの取得元を変更する
+    * ソースコードのバージョン情報を変更する
     * ソースコードにパッチを当てる
-    * パッケージ間のビルド時の依存関係を変更する
-    * パッケージ間の実行時の依存関係を変更する
+    * パッケージ間の依存関係を変更する
+
 
 ## bbappendとbbclass
 #### 学習すること

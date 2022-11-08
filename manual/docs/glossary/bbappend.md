@@ -1,4 +1,0 @@
----
-title: bbappendファイル
-glossary: bbappend
----

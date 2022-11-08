@@ -2,19 +2,11 @@
 title: パッケージ名を変更する
 ---
 
+## 先に読むべきページ
+* [レシピファイルとincファイル](../study.md)
 
-!!! NOTE
-
-    このページを読む前に、[レシピファイルとincファイル](../preamble.md)を確認してください  
-
-!!! NOTE
-
-    実はパッケージとレシピは1:1の関係ではありませんが、ここでは説明しません  
-
-# パッケージ名を変更する
-
-あるレシピが提供するパッケージの名前はPN変数として管理されます  
-PN変数は以下のように決定されます。  詳細は [リンク1](https://git.yoctoproject.org/poky/tree/bitbake/lib/bb/cache.py?h=dunfell-23.0.20#n88) と [リンク2](https://git.yoctoproject.org/poky/tree/bitbake/lib/bb/parse/\__init__.py?h=dunfell-23.0.20#n137) をご参照ください  
+## パッケージ名を変更する
+あるレシピが提供するパッケージの名前はPN変数として以下のように決定されます  
 
 1. レシピがPN変数を定義している場合、定義している値をそのまま使う
 1. レシピがPN変数を定義していない場合、レシピファイルの名前の`_`より前の部分をPN変数とする
@@ -25,9 +17,15 @@ PN変数は以下のように決定されます。  詳細は [リンク1](https
 * レシピファイル名を変更する
 * レシピで定義しているPN変数を変更する
 
+!!! NOTE
+
+    実はパッケージとレシピは1:1の関係ではありませんが、ここでは説明しません  
+
+</br>
+
 #### レシピファイル名を変更する
 
-PN変数が定義されていない場合、レシピファイル名を変更してパッケージ名を変更することができます  
+PN変数が定義されていない場合、レシピファイル名を変更することでパッケージ名を変更できます  
 例えば、alsa-libパッケージを提供しているレシピファイルの名前を変更してみます  
 
 ~~~bash
@@ -47,13 +45,15 @@ $ bitbake alsa-lib-renamed
     ただし、alsa-libパッケージはパッケージ名を変更するとビルドに失敗します  
     SRC_URIなども合わせて修正する必要があるためですが、alsa-libパッケージ特有の事象なのでここでは詳しく説明しません  
 
+</br>
+
 #### レシピで定義しているPN変数を変更する
 
-レシピで定義しているPN変数を新規に追加するかあるいは変更することでパッケージ名を変更することができます  
-例えば、alsa-libパッケージのレシピファイルにPN変数を追加してみます  
+レシピにPN変数を新規に定義する、あるいは既に定義済みのPN変数を変更することでパッケージ名を変更できます  
+例えば、alsa-libパッケージのレシピファイルで新たにPN変数を定義してみます  
 
 ~~~bash
-$ vi ./meta/recipes-multimedia/alsa/alsa-lib_1.2.7.2.bb
+$ cat ./meta/recipes-multimedia/alsa/alsa-lib_1.2.7.2.bb
 SUMMARY = "ALSA sound library"
 DESCRIPTION = "(Occasionally a.k.a. libasound) is a userspace library that \
 provides a level of abstraction over the /dev interfaces provided by the kernel modules."
@@ -68,7 +68,7 @@ PN = "alsa-lib-renamed"  # 追加した行
 # 以下省略
 ~~~
 
-変更したレシピファイルはalsa-lib-renamedパッケージを提供するため、以下のコマンドでalsa-lib-renamedパッケージをビルドできます
+このレシピはalsa-lib-renamedパッケージを提供し、次のコマンドでビルドできます
 
 ~~~bash
 $ source oe-init-build-env
