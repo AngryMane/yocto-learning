@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="412px" height="142px" viewBox="-0.5 -0.5 412 142" content="&lt;mxfile&gt;&lt;diagram id=&quot;aymziZXMJs1ecRtyo2n1&quot; name=&quot;ページ1&quot;&gt;7VZdb5swFP01fq3AQAiP+SCdNE2rloe1j25wwJvByDEJ2a+fgesE5KTJ1kZVpT5x7/G1uD7n+ALyZnl9L0mZfRMJ5Qg7SY28OcLY9aOxfjTIHhDHCzsklSwB7Ags2R9qCgGtWEI3g0IlBFesHIIrURR0pQYYkVLshmVrwYdvLUlKLWC5ItxGf7JEZR06xuER/0JZmpk3u6OoW8mJKYaTbDKSiF0P8mLkzaQQqovyekZ5w57hpdu3OLN6aEzSQl2zAZTYEl7B2URVqkpBd2pvjkwTzQCkhSj0Y5qpnOvM1SGtmXrsxU86du4CyOaN8o5J9iYplNw/9pPeriY9bmszs28tCgWWcH2db5QUvw86YFMBvZ5gBKCNqOQKTofBRESmFKpAy+bcvW3A4j0VOdVN6QJJOVFsO3QGAYOlh7qjBjoAGc5o6JzQRJWfmmAcvZcm2JLkSayUQHjEdWvTZ6mjtIkepPjVTBxLKs71cGoU2mVM0WVJ2mPu9IAcqkY2ZTex1qymiUXcKWrPsrmlUtH6RaZg1QvAdDCR/QjyXW+8AZT1JpvBXsPtyOL2uWJ6IP+f25276F/8rpMHKplumspX3oFLnrdvyVXXILCvAX6vaxBYUlkq6Q9a2YREXw952e43cTP2h24OHNvN/gk3j97AzaFNUeyhMUaTKQTTyASLNvBQFJsa3yxN2sBFUWiCBWdFVX9fQj6Jf1SF0sa1FJCiKpJmdLSuvMD/Ww3u68U5iGFGzcgWxw1upE5kqWNYjEMU+WgyPtC7nH/96NQG/u2o1enxL7Vd6/3se/Ff&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="412px" height="142px" viewBox="-0.5 -0.5 412 142" content="&lt;mxfile&gt;&lt;diagram id=&quot;aymziZXMJs1ecRtyo2n1&quot; name=&quot;ページ1&quot;&gt;7VZNj9owEP01vq7yScgRlrCVqqqrcuju0UtM4tbEkXEg9Nd3kowhkWGh3UWrSr3AzPOMYr/3PAnx79f1g6Jl/kWmTBDPSWviz4jnxW4Ivw2w74Ao8jsgUzztIPcILPgvhqCDaMVTthkUaimF5uUQXMqiYEs9wKhScjcsW0kxfGpJM2YBiyUVNvqdpzrv0LEXHfFPjGe5ebI7iruVNTXFeJJNTlO560F+Qvx7JaXuonV9z0TDneGl65ufWT1sTLFCX9Mw7hq2VFR4NlmVutK4O703R2YpMIBpIQv4m+Z6LSBzIWQ110+9+Bli5y7EbNbo7phkb5JCq/1TP+l1Nemxrc1M30oWGi3hBpBvtJI/Dzp4pgL3eoIRhDayUks8nYcmoipjWIVaNufutSGLD0yuGWwKChQTVPPt0BkUDZYd6o4aQIAynNHQOaGJLv9rAoPjozTxLEme5VJL4o0EbG36oiDKmuhRyR/NxLGkEgKGU6PQLueaLUraHnMH43GoGt2U3cRa8ZqlFnGnqD3L5pYpzepXmcJVP0TT4UAOYsx3vfGGUN6bbAZ7C7cji9uXisNA/ju3O3fxn/gdkkemOGyaqTfegUuet2/JVdcgtK+B91HXILSkslSCF1rZhBSuh7ps95u42QuGbg4d283BCTeP3sHNkU1R4pOxRyZTDKaxCeZt4JM4MTWBWZq0gUviyARzwYuq/rrAfJJ8qwoNxrUUULIq0mZ0tK68wP97De7rxTmIYUbNyBbHDW+kTmypY1hMIhIHZDI+0LuYff7XqQ2D21EL6fErtV3rfer7yW8=&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <path d="M 191 71 L 253.85 35.09" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
@@ -114,7 +114,7 @@
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
         <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
             <text text-anchor="middle" font-size="10px" x="50%" y="100%">
-                Viewer does not support full SVG 1.1
+                Text is not SVG - cannot display
             </text>
         </a>
     </switch>

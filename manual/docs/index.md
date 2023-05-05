@@ -21,18 +21,25 @@ title: はじめに
 <a id="目次"></a>
 # 目次
 
-## 01 yocto/poky/bitbake
+## 01 yoctoとpoky
 #### 学習すること
-最初に [**yocto/poky/bitbake**](./01-yocto-poky-bitbake/study.md) の概要を学びます  
+最初に [**yoctoとpoky**](./01-yocto-poky/study.md) の概要を学びます  
 
 #### できるようになること
 
-* [存在するパッケージ名のリストを取得する](./01-yocto-poky-bitbake/usecase/01-get-pakcage-list.md)
-* [サンプルOSをビルドする](./01-yocto-poky-bitbake/usecase/02-build-sample-os.md)
-* [その他(OS以外)のパッケージをビルドする](./01-yocto-poky-bitbake/usecase/03-build-package.md)
+* [サンプルOSをビルドする](./01-yocto-poky/usecase/02-build-sample-os.md)
+
+## 02 bitbakeとpackage
+#### 学習すること
+[**bitbakeとpackage**](./02-bitbake-package/study.md) の概要を学びます  
+
+#### できるようになること
+* [存在するパッケージ名のリストを取得する](./02-bitbake-package/usecase/01-get-pakcage-list.md)
+* [その他(OS以外)のパッケージをビルドする](./02-bitbake-package/usecase/02-build-package.md)
 
 
-## 02 レシピファイルとincファイル
+
+## 03 レシピファイルとincファイル
 #### 学習すること
 [**レシピファイルとincファイル**](./02-recipe-inc/study.md) を学びます  
 

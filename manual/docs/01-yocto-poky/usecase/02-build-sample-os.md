@@ -3,7 +3,7 @@ title: サンプルOSをビルドする
 ---
 
 ## 先に読むべきページ
-* [yocto/poky/bitbake](../study.md)
+* [yoctoとpoky](../study.md)
 
 ## サンプルOSをビルドする
 pokyの`設定ファイル`はいくつかのサンプルOSをビルドできるように実装されています。ここでは、そのうちの一つをビルドします  
@@ -17,26 +17,23 @@ $ cd poky
 ~~~
 
 次に、サンプルOSをビルドします。ここでは、`core-image-minimal`という名前のサンプルOSをビルドします  
-[yocto/bitbake/pokyとは](../study.md) の通り、以下の手順でビルドします  
 
-1. `ビルド環境を設定するスクリプト` を実行する
-1. `bitbakeコマンド` を実行する
+~~~bash
+# ビルド環境を設定するスクリプトを実行する
+$ source oe-init-build-env
+
+# ビルド用のコマンド(bitbakeコマンド)を実行する
+$ bitbake core-image-minimal 
+~~~
 
 !!! NOTE
 
     最初のビルドにはかなり時間がかかるため、時間があるときに実施してください  
 
-~~~bash
-# ビルド環境を設定するスクリプト を実行する
-$ source oe-init-build-env
-
-# bitbakeコマンド を実行する
-$ bitbake core-image-minimal 
-~~~
-
-build/ディレクトリの中(build/tmp/deploy/images/qemux86-64/)を確認すると、linuxカーネルやrootfsが出力されていることが確認できます  
+buildディレクトリの中(poky/build/tmp/deploy/images/qemux86-64/)を確認すると、linuxカーネルやrootfsが出力されていることが確認できます  
 
 ~~~bash
+$ cd build/tmp/deploy/images/qemux86-64
 $ ll
 total 52388
 drwxr-xr-x 2 ./
