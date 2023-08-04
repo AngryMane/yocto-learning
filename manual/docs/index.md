@@ -21,21 +21,23 @@ title: はじめに
 <a id="目次"></a>
 # 目次
 
-## 01 yoctoとpoky
+## [01 yoctoとpoky](./01-yocto-and-poky/index.md)
+
 #### 学習すること
-最初に [**yoctoとpoky**](./01-yocto-poky/study.md) の概要を学びます  
+* [**yoctoとpoky**](./01-yocto-and-poky/index.md) の概要を学びます  
 
 #### できるようになること
+* [ビルド環境をセットアップし、サンプルOSをビルドする](./01-yocto-and-poky/01-build-sample-os.md)
 
-* [サンプルOSをビルドする](./01-yocto-poky/usecase/02-build-sample-os.md)
+## [02 packageについて](./02-package/index.md)
+[**package**](./02-package/index.md) の概要を学びます  
 
-## 02 bitbakeとpackage
 #### 学習すること
-[**bitbakeとpackage**](./02-bitbake-package/study.md) の概要を学びます  
+* [**packageについて**](./02-package/index.md) 
 
 #### できるようになること
-* [存在するパッケージ名のリストを取得する](./02-bitbake-package/usecase/01-get-pakcage-list.md)
-* [その他(OS以外)のパッケージをビルドする](./02-bitbake-package/usecase/02-build-package.md)
+* [存在するパッケージ名のリストを取得する](./02-package/01-get-pakcage-list.md)
+* [その他(OS以外)のパッケージをビルドする](./02-package/02-build-package.md)
 
 
 

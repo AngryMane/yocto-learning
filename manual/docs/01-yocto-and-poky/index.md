@@ -1,23 +1,24 @@
----
-title: Study
----
-
-# yocto/poky/bitbake
+# yoctoとpoky
 
 ## Yoctoとは
-Yoctoプロジェクトは以下をビルドするための開発環境です  
+Yoctoプロジェクトは 
 
-* `カスタマイズしたlinuxOSのRuntime`  
-* `Runtime用のSDK`  
+* <span style="color:red">**特定の実行環境**</span> 向けに
+* <span style="color:red">**カスタマイズしたlinuxOS**</span> を
+
+ビルドするための開発環境です
 
 ![](./images/inout.drawio.svg)
 
 
-例えば、以下のような使い方ができます  
+例えば以下のようなことができます
 
-* pythonを実行できる必要最小限のソフトウェアのみインストールしたlinux OSのRuntimeをビルドする  
+* Raspberry pi向けに`カスタマイズしたlinuxOS`をビルドし、Raspberry piボード上で動かす
+* QEMU向けに`カスタマイズしたlinuxOS`をビルドし、QEMUで動かす
+* Docker向けに`カスタマイズしたlinuxOS`をビルドし、Dockerコンテナとして動かす
+* pythonを実行できる必要最小限のソフトウェアのみインストールしたlinux OSをビルドする  
 * ↑のOS上で動かすソフトウェアをビルドするためのSDKをビルドする  
-* カスタマイズしたlinux OSやそのSDKをビルドする環境を配布する。受け取った人はさらにカスタマイズしてビルドする  
+* カスタマイズしたlinux OSやそのSDKをビルドする環境を配布する
 
 </br>
 
@@ -27,17 +28,14 @@ pokyはyoctoをサンプル実装したリポジトリです。pokyには以下�
 * bitbakeコマンド
 * 設定ファイル
 
-ただし、 **この設定ファイルはサンプル実装です。** つまり、pokyの設定ファイルを使わずに0から設定ファイルを作ることもできます  
-(そのようなことをしているプロジェクトはみたことがないですが)  
-
+ただし、 **この設定ファイルはサンプル実装です。** 多くのユーザーはこの設定ファイルをカスタマイズすることになります  
 これらのファイルを使って以下のようにビルドします  
-ここではbitbakeコマンドのことは気にしないでください。あとで出てきます  
 
 ```bash
-# サンプルのカスタマイズしたlinux OSのruntimeをビルドするコマンドの例
+# サンプルのカスタマイズしたlinux OS(core-image-minimal)をビルドするコマンドの例
 $ bitbake core-image-minimal
 
-# サンプルのRuntime用のSDKをビルドするコマンドの例
+# サンプルのSDK(meta-toolchain)をビルドするコマンドの例
 $ bitbake meta-toolchain
 ```
 
@@ -45,15 +43,11 @@ $ bitbake meta-toolchain
 
 サンプルのRuntime(=core-image-minimal)やサンプルのSDK(=meta-toolchain)の詳細は、設定ファイルが定義しています  
 
-<!--
-### pokyのディレクトリ構成
-現時点で必要な粒度でpokyのディレクトリ構成を確認します。  
+## pokyのディレクトリ構成
+現時点で必要な粒度でpokyのディレクトリ構成を確認します  
 
 ![](images/poky_directory.drawio.svg)
 
-!!! NOTE
-
-    出力されるファイル名は設定ファイルによって大きく変化します  
 
 実際にpokyのディレクトリ構成を確認してみましょう  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
@@ -74,7 +68,7 @@ $ tree -L 1
 ├── README.poky.md -> meta-poky/README.poky.md               |
 ├── README.qemu.md                                           ┘
 ├── bitbake                                                  <- bitbakeコマンド(を提供しているディレクトリ)
-├── build                                                    <- この中に `カスタマイズしたlinuxOSのRuntime` や `Runtime用のSDK` が出力される
+├── build                                                    <- ビルド用のワーキングディレクトリ
 ├── contrib                                                  ┐
 ├── documentation                                            │
 ├── meta                                                     │
@@ -94,7 +88,7 @@ $ tree -L 1
 $ tree -L 1
 .
 ├── bitbake            <- bitbakeコマンド(を提供しているディレクトリ)
-├── build              <- この中にRuntimeとSDKがある
+├── build              <- ビルド用のワーキングディレクトリ
 ├── contrib            ┐
 ├── meta               │
 ├── meta-poky          ├  設定ファイル
@@ -105,5 +99,4 @@ $ tree -L 1
 └── scripts
 ~~~
 
-先に示した図の通りのディレクトリ構造になっていることが分かります  
--->
+概ね先に示した図の通りのディレクトリ構造になっていることが分かります  

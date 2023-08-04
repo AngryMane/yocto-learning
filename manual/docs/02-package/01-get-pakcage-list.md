@@ -3,30 +3,15 @@ title: 存在するパッケージ名のリストを取得する
 ---
 
 ## 先に読むべきページ
-* [yocto/poky/bitbake](../study.md)
+* [bitbakeとpackage](./index.md)
 
 ## 存在するパッケージのリストを取得する
-bitbakeコマンドの入力にはパッケージ名がありますが、そもそもどんな名前のパッケージがあるか知らないとパッケージ名を指定できません  
+bitbakeコマンドにはパッケージ名を入力しますが、どんな名前のパッケージがあるか知らないとパッケージ名を指定できません  
 そのため、このページでは実際にどのようなパッケージが存在しているのかを確認する方法を紹介します  
 
 </br>
 
-まずはpokyリポジトリをcloneします  
-使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
-
-~~~bash
-$ git clone https://git.yoctoproject.org/git/poky -b {{YOCTO_BRANCH}}
-$ cd poky
-~~~
-
-
-次に、`ビルド環境を設定するスクリプト`を実行します。これをやらないとbitbakeなどのコマンドが使用できないためです  
-
-~~~bash
-$ source oe-init-build-env
-~~~
-
-`ビルド環境を設定するスクリプト`を実行することで、様々なユーティリティコマンドが使用可能になります  
+予め [ビルド環境をセットアップし、サンプルOSをビルドする](../01-yocto-and-poky/01-build-sample-os.md) を参照してビルド環境をセットアップしてください  
 今回はbitbake-layersコマンドを使用します。 以下の通りコマンドを実行してください  
 
 ~~~bash

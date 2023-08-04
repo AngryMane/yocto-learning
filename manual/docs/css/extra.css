@@ -9,6 +9,7 @@
 
 .md-sidebar--primary {
   max-width: 100%; /* or 100%, if you want to stretch to full-width */
+  /*width: 400px*/
 }
 
 .md-sidebar--secondary {
