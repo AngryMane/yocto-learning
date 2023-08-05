@@ -9,7 +9,7 @@
 $ bitbake python3
 ~~~
 
-このように <span style="color: red; ">**bitbakeコマンドがビルド対象とするもの を パッケージ と呼びます。**</span> 上の図の場合、`python3`がパッケージですね  
+このように <span style="color: red; ">**bitbakeコマンドがビルド対象とするものをパッケージと呼びます。**</span> 上のコマンドの場合、`python3`がパッケージですね  
 パッケージにはサンプルのカスタマイズしたlinux OSのRuntimeや、そのRuntime用のSDKも存在します。 
 
 ~~~bash
