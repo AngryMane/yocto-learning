@@ -16,13 +16,19 @@ $ git clone https://git.yoctoproject.org/git/poky -b {{YOCTO_BRANCH}}
 $ cd poky
 ~~~
 
-次に、oe-init-build-envを読み込みます  
-oe-init-build-envはビルドに必要なコマンドへのパスを通すなど、セットアップに必要な処理を実行してくれます  
+次に、pokyリポジトリ直下のoe-init-build-envを読み込みます    
+これはビルドに必要なコマンドへのパスを通すなど、セットアップに必要な処理を実行してくれます  
 
 ~~~bash
 # ビルド環境を設定するスクリプトを実行する
 $ source oe-init-build-env
 ~~~
+
+!!! note
+
+    このコマンドはビルド用のワーキングディレクトリ(build)を生成し、カレントディレクトリをワーキングディレクトリ(build)に変更します  
+    ワーキングディレクトリの名前は引数で変更できます  
+
 
 ## ビルドを実行する
 

@@ -4,9 +4,8 @@ title: はじめに
 
 # はじめに
 
-## 本ドキュメントの目的
-Yoctoは非常に学習曲線が急峻です  
-できるだけ学習曲線がなだらかにするために、このドキュメントはいくつかの段階に分けてYoctoの使い方を説明します  
+## このドキュメントの目的
+このドキュメントの目的はYoctoの使い方を可能な限り簡単に説明することです  
 
 ## 対象読者
 
@@ -15,51 +14,22 @@ Yoctoは非常に学習曲線が急峻です
 * yoctoでやりたいことがあるが、yoctoのことをあまり知らない
 * Linuxでのソフトウェア開発に慣れており、シェルでコマンドを実行することに抵抗がない
 
-## 本ドキュメントの読み方
-
-基本的には[目次](#目次)を上から順番に読んでください  
-[目次](#目次)の各セクションは以下の2種類のページを持っています
-
-* 学習すること  
-    Yoctoを使う上で知っておくべきYoctoの仕組みや概念を解説
-* できるようになること  
-    `学習すること`を読んでできるようになることのHowto
-
-
 ---
 
 <a id="目次"></a>
 # 目次
 
-## [01 yoctoとpoky](./01-yocto-and-poky/index.md)
-
-#### 学習すること
-* [**yoctoとpoky**](./01-yocto-and-poky/index.md) の概要を学びます  
-
-#### できるようになること
-* [ビルド環境をセットアップし、サンプルOSをビルドする](./01-yocto-and-poky/01-build-sample-os.md)
-
-## [02 packageについて](./02-package/index.md)
-[**package**](./02-package/index.md) の概要を学びます  
-
-#### 学習すること
-* [**packageについて**](./02-package/index.md) 
-
-#### できるようになること
-* [存在するパッケージ名のリストを取得する](./02-package/01-get-pakcage-list.md)
-* [その他(OS以外)のパッケージをビルドする](./02-package/02-build-package.md)
-
-
-
-## [03 レイヤとレシピファイル](./03-layer-and-recipe/index.md)
-#### 学習すること
-* [**レイヤとレシピファイル**](./03-layer-and-recipe/index.md) を学びます  
-
-#### できるようになること
-* [パッケージの設定を確認する](./03-layer-and-recipe/01_check-package-params.md)
-* パッケージの基本的な設定を変更する
-    * [パッケージ名を変更する](./03-layer-and-recipe/02_change-package-name.md)
-    * [レシピのバージョン情報を変更する](./03-layer-and-recipe/03_change-recipe-version.md)
+1. [01 yoctoとpokyの概要](./01-yocto-and-poky/index.md)
+1. [[実践]ビルド環境をセットアップし、サンプルOSをビルドする](./01-yocto-and-poky/01-build-sample-os.md)
+1. [02 pokyの詳細](./02-poky-detail/index.md)
+1. [03 packageについて](./03-package/index.md)
+1. [[実践]存在するパッケージ名のリストを取得する](./03-package/01-get-pakcage-list.md)
+1. [[実践]その他(OS以外)のパッケージをビルドする](./03-package/02-build-package.md)
+1. [04 レイヤとレシピファイル](./04-layer-and-recipe/index.md)
+1. [[実践]パッケージの設定を確認する](./04-layer-and-recipe/01_check-package-params.md)
+1. [実践]パッケージの基本的な設定を変更する
+    * [パッケージ名を変更する](./04-layer-and-recipe/02_change-package-name.md)
+    * [レシピのバージョン情報を変更する](./04-layer-and-recipe/03_change-recipe-version.md)
     * ソースコードの取得元を変更する
     * ソースコードのバージョン情報を変更する
     * ソースコードにパッチを当てる
