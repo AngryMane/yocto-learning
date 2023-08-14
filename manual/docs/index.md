@@ -19,21 +19,6 @@ title: はじめに
 <a id="目次"></a>
 # 目次
 
-1. [yoctoとpokyの概要](./01-yocto-and-poky/index.md)
-1. [[実践]ビルド環境をセットアップし、サンプルOSをビルドする](./01-yocto-and-poky/01-build-sample-os.md)
-1. [pokyの詳細](./02-poky-detail/index.md)
-1. [packageについて](./03-package/index.md)
-1. [[実践]存在するパッケージ名のリストを取得する](./03-package/01-get-pakcage-list.md)
-1. [[実践]その他(OS以外)のパッケージをビルドする](./03-package/02-build-package.md)
-1. [レイヤとレシピファイル](./04-layer-and-recipe/index.md)
-1. [[実践]パッケージの設定を確認する](./04-layer-and-recipe/01_check-package-params.md)
-1. [実践]パッケージの基本的な設定を変更する
-    * [パッケージ名を変更する](./04-layer-and-recipe/02_change-package-name.md)
-    * [レシピのバージョン情報を変更する](./04-layer-and-recipe/03_change-recipe-version.md)
-    * ソースコードの取得元を変更する
-    * ソースコードのバージョン情報を変更する
-    * ソースコードにパッチを当てる
-    * パッケージ間の依存関係を変更する
 
 
 ## bbappendとbbclass

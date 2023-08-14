@@ -1,4 +1,4 @@
-# レイヤとレシピファイル
+# コンフィグファイル
 
 [yoctoとpoky](../01-yocto-and-poky/index.md)ではpokyのディレクトリを以下のように説明しました  
 
