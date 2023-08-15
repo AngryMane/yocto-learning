@@ -1,10 +1,35 @@
 # レシピの詳細
 
-## レシピの文法と主な変数
+## レシピの文法
 
-レシピファイルはbitbake固有の文法で記述されています  
-細かい文法については
+!!! warning
 
+    レシピファイルはbitbake固有の文法で記述されていますが、現時点でドキュメントを作成できていません  
+    [公式ドキュメント](https://docs.yoctoproject.org/bitbake/2.2/bitbake-user-manual/bitbake-user-manual-metadata.html)をご参照ください  
+
+## レシピで宣言する主要な変数
+
+### PN
+
+### PACKAGES
+
+### DEPENEDS
+
+### RDEPENDS
+
+### PROVIDES
+
+### RPROVIDES
+
+### SRC_URI
+
+### SRCREV
+
+### FILES
+
+## PN/PROVIDES/PACKAGES/RPROVIDESの関係
+
+## レシピで宣言する主要な関数
 
 ## パッケージ間の依存関係
 
@@ -27,6 +52,5 @@ install済みのこれらのパッケージを使用すると、ビルド環境�
 !!! WARNING
 
     依存関係にはビルド時の依存関係と実行時の依存関係があるのですが、ここでは詳しく説明しません  
-
 
 

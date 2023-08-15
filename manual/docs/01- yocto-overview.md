@@ -141,7 +141,7 @@ DESCRIPTION = "Simple helloworld application"
 LICENSE = "MIT"
 
 PN = "hello"
-RPROVIDES:${PN} = "hello-package hello-package-doc"
+PACKAGES:${PN} = "hello-package hello-package-doc"
 
 SRC_URI = " \
     git://github.com/ab/cd.git;branch=main \
@@ -158,16 +158,16 @@ do_install() {
 }
 ```
 
-ここでは `PN` 変数と`RPROVIDES` 変数が重要です。 
+ここでは `PN` 変数と`PACKAGES` 変数が重要です。 
  
 #### PN 
 
 `PN` 変数は `プロバイダ` を宣言しています。この `プロバイダ` がbitbakeのビルド対象です  
 同じレシピ内の他の記述はこのプロバイダのパラメータを宣言しています  
 
-#### RPROVIDES 
+#### PACKAGES 
 
-`RPROVIDES` 変数はパッケージを宣言しています  
+`PACKAGES` 変数はパッケージを宣言しています  
 パッケージはbitbakeがインストーラ(\*.deb,\*.rpmなど)を作成する単位です  
 このパッケージはプロバイダ毎に指定します。1つのプロバイダが複数のパッケージを持つこともあります  
 
@@ -179,9 +179,9 @@ do_install() {
 
 !!! warning
 
-    (少なくとも筆者の)実務上、以下の理由からプロバイダとパッケージを区別しないことが多いです  
-    \* 1プロバイダが1パッケージを提供することが多い  
-    \* プロバイダに指定した名前はパッケージ名に含まれていることが多い
+    プロバイダという言葉を定義していますが、yoctoのコミュニティではこれもパッケージと呼びます  
+    しかしながら、別の意味(PACKAGE変数)でパッケージという言葉を使用しているため、区別のためにプロバイダという言葉を使用します  
+    複雑なことをしない限り、実務上区別が必要になることが少ないためこのような状態になっているものと思われます    
 
 !!! warning
 
