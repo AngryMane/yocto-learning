@@ -20,22 +20,18 @@ title: はじめに
 # 目次
 
 
+# Concepts
+* [yoctoの概要](./01-%20yocto-overview.md)
+* [レシピの詳細](./02-recipe-detail.md)
+* [コンフィグファイル](./03-configfile.md)
 
-## bbappendとbbclass
-#### 学習すること
-
-#### できるようになること
-
-## bitbake.conf/bblayers.conf/local.conf/layer.conf
-#### 学習すること
-
-#### できるようになること
-
-## その他便利なツール
-#### 学習すること
-
-#### できるようになること
-
+# How to 
+* [ビルド環境をセットアップし、サンプルOSをビルドする](./how-to/01-build-sample-os.md)
+* [存在するパッケージ名のリストを取得する](./how-to/02-get-pakcage-list.md)
+* [その他(OS以外)のパッケージをビルドする](./how-to/03-build-package.md)
+* [パッケージのパラメータを確認する](./how-to/04_check-package-params.md)
+* [パッケージ名を変更する](./how-to/05_change-package-name.md)
+* [レシピのバージョンを変更する](./how-to/06_change-recipe-version.md)
 
 
 </br>
