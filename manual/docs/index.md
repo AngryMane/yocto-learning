@@ -20,10 +20,11 @@ title: はじめに
 # 目次
 
 
-# Concepts
-* [yoctoの概要](./01-%20yocto-overview.md)
-* [レシピの詳細](./02-recipe-detail.md)
-* [コンフィグファイル](./03-configfile.md)
+# Components
+* [yocto](./component/01-yocto.md)
+* [レシピファイル](./component/02-recipe-file.md)
+* [グローバルなコンフィグファイル](./component/03-global-configfile.md)
+* [レイヤ固有のコンフィグファイル](./component/04-layer-configfile.md)
 
 # How to 
 * [ビルド環境をセットアップし、サンプルOSをビルドする](./how-to/01-build-sample-os.md)
@@ -38,7 +39,7 @@ title: はじめに
 </br>
 
 
-# まだ記述できていないユースケース
+# まだ記述できていないHow to
 * nativeパッケージの話
 * プロジェクト全体の設定を変更する
     * 新しいパッケージを作成し、インストール対象に追加する
