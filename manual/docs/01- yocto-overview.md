@@ -121,66 +121,39 @@ $ tree
 
 
 `*.bb` というファイルがレシピと呼ばれるファイルです  
-現時点では `レイヤ=レシピを格納するディレクトリ` と覚えてください  
+簡単にいうと、 `レイヤ=レシピを格納するディレクトリ` です  
 
 </br>
 
 ## レシピ
+
+<!--
 レシピファイルの中身を見てみましょう。 後で説明するため、ここでは文法を気にしなくてもよいです  
-(理解しやすくするため、一部ファイルを編集しています)  
+理解しやすくするため、ファイルを編集してごく簡単に紹介します  
+
 
 ```
-$ cd meta-skeleton/recipes-skeleton/hello-single
-$ cat hello_1.0.bb
-DESCRIPTION = "Simple helloworld application"
-LICENSE = "MIT"
-
 PN = "hello"
 PACKAGES:${PN} = "hello-package hello-package-doc"
-
-SRC_URI = " \
-    git://github.com/ab/cd.git;branch=main \
-    file://helloworld.c \
-"
-
-do_compile() {
-        ${CC} ${LDFLAGS} helloworld.c -o helloworld
-}
-
-do_install() {
-        install -d ${D}${bindir}
-        install -m 0755 helloworld ${D}${bindir}
-}
+SRC_URI = "git://github.com/ab/cd.git;branch=main"
 ```
+-->
 
-ここでは `PN` 変数と`PACKAGES` 変数が重要です。 
- 
-#### PN 
+レシピファイルは `bitbakeコマンドにinputするファイル` です  
+例えば、以下の要素を定義します(他にもいろんなパラメータがあります)  
 
-`PN` 変数は `パッケージ` を宣言しています。 `パッケージ` はbitbakeのビルド対象です  
-同じレシピ内の他の記述はこのパッケージのパラメータを宣言しています  
+* ビルドする単位(= `パッケージ` )
+* パラメータ(ソースコードのURIなど)
+* インストールする単位(= `ランタイムパッケージ` )  
 
-#### PACKAGES 
-
-`PACKAGES` 変数は `ランタイムパッケージ` を宣言しています  
-`ランタイムパッケージ`はbitbakeがインストーラ(\*.deb,\*.rpmなど)を作成する単位です  
-`パッケージ` と `ランタイムパッケージ` は1対Nの関係です  
-
-</br>
-
-以上のことを踏まえてレシピとプロバイダ、パッケージの関係をまとめると以下のようになります  
+わかりづらいと思うので、レシピとパッケージ、ランタイムパッケージの関係を画像にまとめてみましょう  
 
 ![](./images/recipe-package-bitbake.drawio.svg)
 
 !!! warning
 
-    パッケージとランタイムパッケージという言葉を定義していますが、yoctoのコミュニティでは両方ともにパッケージと呼びます  
-    しかしながら、上述のように異なる意味を持つ概念であるため、ここでは区別のために言葉を分けています  
-
-!!! note
-
-    PN変数は省略することができます  
-    省略した場合、レシピファイル名から一定のルールにしたがってPN変数が設定されます  
+    パッケージとランタイムパッケージという言葉を定義していますが、yoctoのコミュニティではともに単にパッケージと呼びます  
+    しかしながら、上述のように異なる意味を持つ概念であるためここでは区別のために言葉を分けています  
 
 !!! note
 
@@ -194,7 +167,6 @@ do_install() {
 ## まとめ
 
 最後にpoky、レイヤ、レシピとパッケージの関係を一枚の絵にまとめてみます  
-(これはディレクトリ構成ではないことに注意してください)  
 
 ![](./images/poky-layer-recipe-package.drawio.svg)
 
