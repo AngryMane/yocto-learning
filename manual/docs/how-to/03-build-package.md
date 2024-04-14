@@ -3,7 +3,7 @@ title: その他(OS以外)のパッケージをビルドする
 ---
 
 ## 先に読むべきページ
-* [yocto/poky/bitbake](../study.md)
+* [Yocto](../component/01-yocto.md)
 
 ## その他(OS以外)のパッケージをビルドする
 その他(OS以外)のパッケージをビルドしてみましょう。まだpokyリポジトリをcloneしていない場合、cloneします  

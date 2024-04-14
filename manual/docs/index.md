@@ -20,14 +20,24 @@ title: はじめに
 # 目次
 
 
-# Components
-* [yocto](./component/01-yocto.md)
-* [レシピファイル](./component/02-recipe-file.md)
-* [グローバルなコンフィグファイル](./component/03-global-configfile.md)
-* [レイヤ固有のコンフィグファイル](./component/04-layer-configfile.md)
+# Software design
 
-# How to 
-* [ビルド環境をセットアップし、サンプルOSをビルドする](./how-to/01-build-sample-os.md)
+Software designはYoctoの外形的な設計を説明します  
+このページはHowtoを説明しませんが、Howtoを理解するのに必要です  
+
+最初はYoctoのページのみを参照し、その後必要に応じて他のページを参照してください  
+
+* [Yocto](./software-design/01-yocto.md)
+* [レシピファイル](./software-design/02-recipe-file.md)
+* [グローバルなコンフィグファイル](./software-design/03-global-configfile.md)
+* [レイヤ固有のコンフィグファイル](./software-design/04-layer-configfile.md)
+
+# How-to 
+
+How-toはユーザーがやりたいことの具体的な手順を説明します  
+ここではYoctoの概念等の説明はしないため、わからないことがあればComponentsを参照してください  
+
+* [サンプルOSをビルドする](./how-to/01-build-sample-os.md)
 * [存在するパッケージ名のリストを取得する](./how-to/02-get-pakcage-list.md)
 * [その他(OS以外)のパッケージをビルドする](./how-to/03-build-package.md)
 * [パッケージのパラメータを確認する](./how-to/04_check-package-params.md)

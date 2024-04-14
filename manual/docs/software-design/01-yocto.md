@@ -1,4 +1,4 @@
-# yoctoの概要
+# Yocto
 
 !!! note
 
@@ -26,7 +26,7 @@ Yoctoプロジェクトは
 pokyはyoctoの実装リポジトリです。 pokyの主な構成要素はレイヤとレシピです  
 pokyとレイヤ、レシピは以下のような関係になっています  
 
-![](./images/poky-layer-recipe.drawio.svg)
+![](../images/poky-layer-recipe.drawio.svg)
 
 実際にpokyディレクトリに何が入っているのかを観察します  
 使用するブランチは[こちら](https://wiki.yoctoproject.org/wiki/Releases)から選んでください。ここでは{{YOCTO_BRANCH}}ブランチを選択しています  
@@ -127,18 +127,6 @@ $ tree
 
 ## レシピ
 
-<!--
-レシピファイルの中身を見てみましょう。 後で説明するため、ここでは文法を気にしなくてもよいです  
-理解しやすくするため、ファイルを編集してごく簡単に紹介します  
-
-
-```
-PN = "hello"
-PACKAGES:${PN} = "hello-package hello-package-doc"
-SRC_URI = "git://github.com/ab/cd.git;branch=main"
-```
--->
-
 レシピファイルは `bitbakeコマンドにinputするファイル` です  
 例えば、以下の要素を定義します(他にもいろんなパラメータがあります)  
 
@@ -148,7 +136,7 @@ SRC_URI = "git://github.com/ab/cd.git;branch=main"
 
 わかりづらいと思うので、レシピとパッケージ、ランタイムパッケージの関係を画像にまとめてみましょう  
 
-![](./images/recipe-package-bitbake.drawio.svg)
+![](../images/recipe-package-bitbake.drawio.svg)
 
 !!! warning
 
@@ -160,13 +148,11 @@ SRC_URI = "git://github.com/ab/cd.git;branch=main"
     1つのレシピは複数のパッケージを宣言することが可能ですが、混乱を招くためここでは説明しません  
 
 
-
-
 </br>
 
 ## まとめ
 
 最後にpoky、レイヤ、レシピとパッケージの関係を一枚の絵にまとめてみます  
 
-![](./images/poky-layer-recipe-package.drawio.svg)
+![](../images/poky-layer-recipe-package.drawio.svg)
 

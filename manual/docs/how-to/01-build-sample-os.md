@@ -1,9 +1,9 @@
 ---
-title: ビルド環境をセットアップし、サンプルOSをビルドする
+title: サンプルOSをビルドする
 ---
 
 ## 先に読むべきページ
-* [yoctoとpoky](./index.md)
+* [Yocto](../component/01-yocto.md)
 
 
 ## ビルド環境をセットアップする
