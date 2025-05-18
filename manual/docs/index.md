@@ -35,7 +35,7 @@ Software designはYoctoの外形的な設計を説明します
 # How-to 
 
 How-toはユーザーがやりたいことの具体的な手順を説明します  
-ここではYoctoの概念等の説明はしないため、わからないことがあればComponentsを参照してください  
+ここではYoctoの概念等の説明はしないため、わからないことがあればSoftware designを参照してください  
 
 * [サンプルOSをビルドする](./how-to/01-build-sample-os.md)
 * [存在するパッケージ名のリストを取得する](./how-to/02-get-pakcage-list.md)
