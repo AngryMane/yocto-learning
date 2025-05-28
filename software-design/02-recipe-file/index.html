@@ -1,0 +1,1349 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01-yocto/">
+      
+      
+        <link rel="next" href="../03-global-configfile/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>レシピファイル - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              レシピファイル
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How to
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            How to
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/01-build-sample-os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    サンプルOSをビルドする
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/02-get-pakcage-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    存在するパッケージ名のリストを取得する
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/03-build-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    その他(OS以外)のパッケージをビルドする
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/04_check-package-params/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    パッケージのパラメータを確認する
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/05_change-package-name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    パッケージ名を変更する
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/06_change-recipe-version/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    レシピのバージョンを変更する
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/07_create-new_recipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    新しくレシピを作成する
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/why-created-this/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    このドキュメントを作成した理由
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-yocto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yocto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    レシピファイル
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    レシピファイル
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピの文法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピ毎に定義される主要な変数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レシピ毎に定義される主要な変数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pn" class="md-nav__link">
+    <span class="md-ellipsis">
+      PN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      PACKAGES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depeneds" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEPENEDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDEPENDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROVIDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rprovides" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPROVIDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src_uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      SRC_URI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcrev" class="md-nav__link">
+    <span class="md-ellipsis">
+      SRCREV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      FILES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packageconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      PACKAGECONFIG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pv" class="md-nav__link">
+    <span class="md-ellipsis">
+      PV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピで宣言する主要な関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レシピで宣言する主要な関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_patch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_configure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_build" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_package" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_install" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージ間の依存関係
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-global-configfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グローバルなコンフィグファイル
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-layer-configfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    レイヤ固有のコンフィグファイル
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピの文法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピ毎に定義される主要な変数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レシピ毎に定義される主要な変数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pn" class="md-nav__link">
+    <span class="md-ellipsis">
+      PN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      PACKAGES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depeneds" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEPENEDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDEPENDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROVIDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rprovides" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPROVIDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src_uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      SRC_URI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcrev" class="md-nav__link">
+    <span class="md-ellipsis">
+      SRCREV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      FILES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packageconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      PACKAGECONFIG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pv" class="md-nav__link">
+    <span class="md-ellipsis">
+      PV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      レシピで宣言する主要な関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レシピで宣言する主要な関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_patch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_configure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_build" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_package" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_install" class="md-nav__link">
+    <span class="md-ellipsis">
+      do_install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージ間の依存関係
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">レシピファイル</h1>
+<h2 id="_2">レシピの文法</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>レシピファイルはbitbake固有の文法で記述されていますが、現時点でドキュメントを作成できていません<br />
+<a href="https://docs.yoctoproject.org/bitbake/2.2/bitbake-user-manual/bitbake-user-manual-metadata.html">公式ドキュメント</a>をご参照ください  </p>
+</div>
+<h2 id="_3">レシピ毎に定義される主要な変数</h2>
+<h3 id="pn">PN</h3>
+<p><code>PN</code> 変数は <code>パッケージ</code> を宣言しています。 <code>パッケージ</code> の名前をbitbakeに引数として渡すことでビルドができます  </p>
+<pre><code>$ bitbake hello # これでhelloパッケージをビルドできる
+</code></pre>
+<p>同じレシピ内の他の記述はこのパッケージのビルド方法などのパラメータを宣言しています  </p>
+<h3 id="packages">PACKAGES</h3>
+<p><code>PACKAGES</code> 変数は <code>ランタイムパッケージ</code> を宣言しています<br />
+<code>ランタイムパッケージ</code>はbitbakeがインストーラ(*.deb,*.rpmなど)を作成する単位です  </p>
+<h3 id="depeneds">DEPENEDS</h3>
+<p>パッケージをビルドする際に必要になる別のパッケージを定義します<br />
+例えば、c++で開発されたソフトウェアをビルドするためにはc++コンパイラ(gcc/clang)が必要です<br />
+このような場合、c++コンパイラを提供するパッケージをDEPENDSに追加します  </p>
+<pre><code>DEPENDS += &quot;clang&quot;
+</code></pre>
+<h3 id="rdepends">RDEPENDS</h3>
+<p>パッケージに含まれるソフトウェアを実行する際に必要になる <strong>ランタイムパッケージ</strong> を定義します<br />
+例えば、GUIアプリをLinuxで動かすとき、WindowManager(X,westonなど)が必要になります<br />
+このような場合、WindowManagerを提供する <strong>ランタイムパッケージ</strong> をRDEPENDSに追加します  </p>
+<pre><code>RDEPENDS += &quot;weston&quot;
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>指定するのはパッケージではなく、ランタイムパッケージであることに注意してください  </p>
+</div>
+<h3 id="provides">PROVIDES</h3>
+<p>今はパッケージの別名を定義する変数だと思ってください  </p>
+<h3 id="rprovides">RPROVIDES</h3>
+<p>今はランタイムパッケージの別名を定義する変数だと思ってください  </p>
+<h3 id="src_uri">SRC_URI</h3>
+<p>パッケージのソースコードを取得するURIです<br />
+例えば、ninjaのレシピファイルには以下のような記述があります  </p>
+<pre><code>SRC_URI = &quot;git://github.com/ninja-build/ninja.git;branch=release;protocol=https&quot;
+SRCREV = &quot;e72d1d581c945c158ed68d9bc48911063022a2c6&quot;
+</code></pre>
+<p>この場合、ninjaのソースコードをgit://github.com/ninja-build/ninja.gitから取得します<br />
+<code>branch=release;protocol=https</code> については何となく意味が分かると思います  </p>
+<h3 id="srcrev">SRCREV</h3>
+<p>パッケージのソースコードのリビジョン(gitのハッシュ値)です<br />
+例えば、ninjaのレシピファイルには以下のような記述があります  </p>
+<pre><code>SRC_URI = &quot;git://github.com/ninja-build/ninja.git;branch=release;protocol=https&quot;
+SRCREV = &quot;e72d1d581c945c158ed68d9bc48911063022a2c6&quot;
+</code></pre>
+<p>この場合、ninjaのリポジトリのe72d1d581c945c158ed68d9bc48911063022a2c6のコミットハッシュのソースコードを使用します  </p>
+<h3 id="files">FILES</h3>
+<p>ランタイムパッケージ毎にインストールするファイルを列挙して定義する変数です<br />
+例えば、以下のようにランタイムパッケージ毎にインストールするファイルを分けて定義します  </p>
+<pre><code>PACKAGES =+ &quot;runtime-package-a runtime-package-a&quot;
+FILES:runtime-package-a += &quot;file_for_a1 file_for_a2&quot;
+FILES:runtime-package-b += &quot;file_for_b2 file_for_b2&quot;
+</code></pre>
+<h3 id="packageconfig">PACKAGECONFIG</h3>
+<p>パッケージの挙動を制御するための便利な変数です<br />
+以下のようにcmakeのビルドパラメータ等を制御するのに使用します  </p>
+<pre><code>PACKAGECONFIG = &quot;featureA&quot;
+PACKAGECONFIG[featureA] = &quot;\
+    --FEATURE_A=ON, \             # PACKAGECONFIGがfeatureAを含むとき、ビルドに使用するパラメータ(cmakeなどに渡します)
+    --FEATURE_A=OFF, \            # PACKAGECONFIGがfeatureAが含まないとき、ビルドに使用するパラメータ(cmakeなどに渡します)
+    build-deps-for-f1, \          # PACKAGECONFIGがfeatureAを含むとき、DEPENDSに追加するパッケージ名
+    runtime-deps-for-f1, \        # PACKAGECONFIGがfeatureAを含むとき、RDEPENDSに追加するランタイムパッケージ名
+    runtime-recommends-for-f1, \  # PACKAGECONFIGがfeatureAを含むとき、RRECOMMENDSに追加するランタイムパッケージパッケージ名
+    featureB&quot;                     # PACKAGECONFIGがfeatureAを含むとき、PACKAGECONFIGが含んでいてはいけないfeature
+PACKAGECONFIG[featureB] = &quot;\
+   # 省略
+&quot;
+</code></pre>
+<h3 id="pv">PV</h3>
+<p>パッケージのバージョン(Package Version)の略語です<br />
+文字列であれば何でも入力できると思いますが、例えば以下のような例が多いです  </p>
+<pre><code>PV = &quot;1.0.0&quot;
+</code></pre>
+<p>ソースコードのバージョンではないことに注意してください  </p>
+<h3 id="pr">PR</h3>
+<p>パッケージのリビジョン(Package Revision)の略語です<br />
+PVは変えたくないけどパッケージの内容は変化しているというような場合にインクリメントして使用します<br />
+文字列であれば何でも入力できると思いますが、例えば以下のような例が多いです  </p>
+<pre><code>PR = &quot;r1&quot;
+</code></pre>
+<h3 id="pe">PE</h3>
+<p>パッケージのエポック(Package Epoch)の略語です<br />
+PV/PRは変えたくないけどパッケージの内容は変化しているというような場合にインクリメントして使用します。整数値を入力します  </p>
+<pre><code>PR = &quot;2&quot;
+</code></pre>
+<h2 id="_4">レシピで宣言する主要な関数</h2>
+<h3 id="do_fetch">do_fetch</h3>
+<h3 id="do_patch">do_patch</h3>
+<h3 id="do_configure">do_configure</h3>
+<h3 id="do_build">do_build</h3>
+<h3 id="do_package">do_package</h3>
+<h3 id="do_install">do_install</h3>
+<h2 id="_5">パッケージ間の依存関係</h2>
+<p>あるパッケージをビルドする際、別のソフトウェアを必要とすることがあります<br />
+例えば、python3(cPython3)をビルドする場合、以下のようなソフトウェアが必要です  </p>
+<ul>
+<li>ビルドのtoolchain<br />
+    python3(cPython3)はCで開発されているためビルドにCコンパイラなどのtoolchainが必要です  </li>
+<li>外部のライブラリ等<br />
+    python3はsqlite3などの外部ライブラリを静的リンクしている(と思う)ので、ビルドにはこれらのライブラリが必要です  </li>
+</ul>
+<p>既にPCにインストール済みのこれらのパッケージを使用すると、ビルド環境によってビルド結果が異なってしまいます<br />
+この問題を解決するために、<strong>あるパッケージをビルドする時、ビルドに必要なソフトウェアのパッケージをbitbakeが検出して自動的にビルドします</strong>  </p>
+<p>つまり、以下の図のようにあるパッケージをbitbakeでビルドすると必要なパッケージが芋づる式にビルドされます<br />
+このため、ちょっとしたソフトウェアであってもyoctoでビルドすると時間がかかることがあります  </p>
+<p><img alt="" src="./images/build-depends.drawio.svg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>依存関係にはビルド時の依存関係と実行時の依存関係があるのですが、ここでは詳しく説明しません  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
